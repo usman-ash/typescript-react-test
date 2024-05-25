@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout repository
       uses: actions/checkout@v3  # Ensure this is v3
-    - name: Setup Node.js environment
+    - name: Setup Node.js
       uses: actions/setup-node@v3  # Ensure this is v3
       with:
-        node-version: '20'  # Explicitly set to Node.js 20
+        node-version: '20'  # Ensure this is Node.js 20
     - name: Install dependencies
       run: npm install
     - name: Run tests
